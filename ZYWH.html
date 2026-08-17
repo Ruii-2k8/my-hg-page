@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Message for My HG 🙄🤍</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(
+                135deg,
+                #ffe4ec,
+                #fce7f3,
+                #e9d5ff
+            );
+
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 30px;
+            text-align: center;
+            width: 85%;
+            max-width: 400px;
+
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        img {
+            width: 200px;
+            max-width: 100%;
+            border-radius: 20px;
+        }
+
+        h1 {
+            color: #db2777;
+            font-size: 28px;
+        }
+
+        button {
+            border: none;
+            padding: 12px 25px;
+            margin: 8px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .yes {
+            background: #ec4899;
+            color: white;
+        }
+
+        .no {
+            background: #f3f4f6;
+            color: #555;
+        }
+
+        #message {
+            margin-top: 20px;
+            color: #db2777;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <img id="sticker"
+        src="https://media.tenor.com/SFy5Za0DyMEAAAAi/erm-fingers.gif">
+
+        <!-- <h1>Will you be my hg? </h1> -->
+
+        <button class="yes" onclick="sayYes()">Yes 😭💞</button>
+
+        <button class="no" onclick="sayNo()">No 🥺</button>
+
+        <div id="message"></div>
+
+    </div>
+
+
+    <script>
+
+        let yesSize = 16;
+
+        function sayYes() {
+
+            document.getElementById("message").innerHTML =
+            " Yayyy! 🥹💗 Thank you for being my HG! Im so happy you said yes. Let as make lots of cute and unforgettable memories together. 🫶🏻✨";
+
+            document.getElementById("sticker").src =
+            "https://media.tenor.com/4V6F6Q7V8hAAAAAC/minions-celebrate.gif";
+
+            document.querySelector(".yes").style.transform =
+            "scale(1.15)";
+        }
+
+
+        function sayNo() {
+
+            document.getElementById("message").innerHTML =
+            "Are you sure? 🥺💗";
+
+            yesSize += 8;
+
+            document.querySelector(".yes").style.fontSize =
+            yesSize + "px";
+
+            document.querySelector(".yes").style.padding =
+            (12 + yesSize / 4) + "px " +
+            (25 + yesSize / 2) + "px";
+        }
+
+    </script>
+
+</body>
+</html>
